@@ -1,11 +1,10 @@
 package com.van.leetcode;
 
+import sun.jvm.hotspot.utilities.Assert;
+
 import java.util.*;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class Mess {
-    public static void main(String[] args) {
-        List<Integer>list=new ArrayList<>();
-        Iterator iterator=list.iterator();
-        iterator.hasNext();
-    }
+
 }

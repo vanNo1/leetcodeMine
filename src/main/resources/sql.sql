@@ -1,6 +1,6 @@
 INSERT INTO `t_category` (`id`, `platform`, `tenant_id`, `biz_type`, `cate_type`, `cate_code`, `cate_name`, `cate_desc`, `icon_url`, `pid`, `leaf`, `level`, `back_categories`, `root_cate_id`, `order_seq`, `extension`, `creator`, `updater`, `is_pre`, `is_delete`, `gmt_create`, `gmt_modified`)
 VALUES
-	(1, 8, '', 'ticket', 1, '01', '技术工单', 'iot平台技术工单', 'https://www.tuya.com/test.png', 0, 0, 1, '', 1, 1, '{"templateId": 1}', '六和', '六和', 0, 0, 1517906411600, 1517906411600),
+	(1, 8, '', 'ticket', 1, '01', '技术工单', 'iot平台技术工单', 'https://www.tuya.com/test.png', 0, 0, 1, '', 1, 1, '{"templateId": 2, "stateMachineId": 1}', '六和', '六和', 0, 0, 1517906411600, 1517906411600),
 	(2, 8, '', 'ticket', 1, '0101', '业务相关模块', '业务相关模块', 'https://www.tuya.com/test.png', 1, 0, 2, '', 1, 1, '{"templateId": 1}', '六和', '六和', 0, 0, 1517906411600, 1517906411600),
 	(3, 8, '', 'ticket', 1, '0102', '平台功能模块', '平台功能模块', 'https://www.tuya.com/test.png', 1, 0, 2, '', 1, 2, '{"templateId": 1}', '六和', '六和', 0, 0, 1517906411600, 1517906411600),
 	(4, 8, '', 'ticket', 1, '0103', '产品功能模块', '产品功能模块', 'https://www.tuya.com/test.png', 1, 0, 2, '', 1, 3, '{"templateId": 1}', '六和', '六和', 0, 0, 1517906411600, 1517906411600),
@@ -191,4 +191,4 @@ VALUES
 	(153, 8, '', 'ticket', 1, '01040401', '电工', '电工', 'https://www.tuya.com/test.png', 142, 1, 4, '', 1, 1, '{"templateId": 1}', '六和', '六和', 0, 0, 1517906411600, 1517906411600),
 	(154, 8, '', 'ticket', 1, '01040402', '照明', '照明', 'https://www.tuya.com/test.png', 142, 1, 4, '', 1, 2, '{"templateId": 1}', '六和', '六和', 0, 0, 1517906411600, 1517906411600),
 	(155, 8, '', 'ticket', 1, '01040403', '大小家电', '大小家电', 'https://www.tuya.com/test.png', 142, 1, 4, '', 1, 3, '{"templateId": 1}', '六和', '六和', 0, 0, 1517906411600, 1517906411600),
-	(156, 8, '', 'ticket', 1, '01040404', '传感', '传感', 'https://www.tuya.com/test.png', 142, 1, 4, '', 1, 4, '{"templateId": 1}', '六和', '六和', 0, 0, 1517906411600, 1517906411600),
+	(156, 8, '', 'ticket', 1, '01040404', '传感', '传感', 'https://www.tuya.com/test.png', 142, 1, 4, '', 1, 4, '{"templateId": 1}', '六和', '六和', 0, 0, 1517906411600, 1517906411600);

@@ -26,7 +26,7 @@ package com.van.leetcode.window;
  * 思路：
  * 要在s2中维护连续则可固定窗口大小就为s1的长度，维护乱序相等则可用数组
  */
-public  class CheckInclusion {
+public  class 字符串的排列 {
     public static boolean checkInclusion(String s1, String s2) {
         if (s1.length()==0||s2.length()==0||s1.length()>s2.length()){
             return false;

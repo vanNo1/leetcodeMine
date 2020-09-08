@@ -23,7 +23,7 @@ import java.util.Collections;
  *
  *
  * 总的来说，先给二维数组排好序，然后对于其第二个元素，也就是h，在这个数组里面寻找最大子序列
- * 2。最大递增子序列问题：额外开辟一个数组存放着最数组中大子序列的情况
+ * 2。最大递增子序列问题：额外开辟一个数组存放着最数组中子序列的情况
  */
 public class 俄罗斯套娃信封问题 {
     public int maxEnvelopes(int[][] envelopes) {

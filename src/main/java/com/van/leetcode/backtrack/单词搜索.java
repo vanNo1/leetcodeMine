@@ -1,4 +1,4 @@
-package com.van.leetcode.other;
+package com.van.leetcode.backtrack;
 
 import javax.print.attribute.standard.PresentationDirection;
 import java.util.LinkedList;

@@ -14,10 +14,10 @@ public class 队列的最大值 {
     private Deque<Integer> queue;
     private Deque<Integer> maxQueue;
 
-    public MaxQueue() {
-        queue = new LinkedList<>();
-        maxQueue = new LinkedList<>();
-    }
+//    public MaxQueue() {
+//        queue = new LinkedList<>();
+//        maxQueue = new LinkedList<>();
+//    }
 
     public int max_value() {
         if (queue.isEmpty()) {

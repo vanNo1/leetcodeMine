@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>剑指offer</module>
+        <module>acwing</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

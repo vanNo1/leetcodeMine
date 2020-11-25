@@ -43,10 +43,13 @@ public class 最大人工岛 {
         int maxArea = 0;
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
+                // 每次去填海
                 int origin = grid[i][j];
                 grid[i][j] = 1;
                 maxArea = Math.max(dfs(grid, i, j), maxArea);
+                // 记得撤回填海！
                 grid[i][j] = origin;
+                // 把计算面积遗留下来的"已走过"的标记符扫掉
                 sweep(grid);
             }
         }
@@ -62,6 +65,7 @@ public class 最大人工岛 {
         return area;
     }
 
+    // 把之前dfs 这里设置"已走过"的标记符给扫掉
     public static void sweep(int[][] grid) {
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {

@@ -8,7 +8,7 @@ import java.util.Queue;
 /**
  * 超出时间
  */
-public class 完全平方数 {
+public class 完全平方数超时 {
     private Queue<Integer> queue = new PriorityQueue<>();
 
     public int numSquares(int n) {

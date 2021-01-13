@@ -16,7 +16,7 @@ package array.twopoint;
  * 链接：https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * <p>
- *
+ * <p>
  * 复习一下快排
  * 双指针
  */
@@ -29,10 +29,10 @@ public class 调整数组顺序使奇数位于偶数前面 {
         int l = 0;
         int r = nums.length - 1;
         while (l < r) {
-            while (nums[l] % 2 == 1 && l < nums.length && l < r) {
+            while (l < nums.length && nums[l] % 2 == 1 && l < r) {
                 l++;
             }
-            while (nums[r] % 2 == 0 && r > -1 && l < r) {
+            while (r > -1 && nums[r] % 2 == 0 && l < r) {
                 r--;
             }
             //只要停下来了就说明可以互换了

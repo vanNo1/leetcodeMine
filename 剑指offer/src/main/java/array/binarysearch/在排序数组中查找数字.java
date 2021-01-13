@@ -24,6 +24,7 @@ public class 在排序数组中查找数字 {
         recurse(nums,0,nums.length-1,target);
         return count;
     }
+    // 递归的去判断(low+high)/2 的index位置是不是等于target，是的话就将count++并且区间一分为二，不是的话就缩小区间
     public void recurse(int[]nums,int low,int high,int target){
         if (low>high)return;
         int mid=(low+high)/2;

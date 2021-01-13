@@ -40,8 +40,10 @@ public class 旋转数组的最小数字 {
             if (numbers[min]<numbers[end]){
                 end=min;
             }
+            // 就连中间的数字都等于右边的那个数字，那么肯定存在很多重复的元素，不如就直接用暴力解法
             if (numbers[min]==numbers[end]){
-                int res=numbers[0];
+                // 这里从start开始而不是0
+                int res=numbers[start];
                 for (int i = start; i <=end ; i++) {
                     res=Math.min(res,numbers[i]);
                 }

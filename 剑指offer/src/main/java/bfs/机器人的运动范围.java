@@ -37,26 +37,48 @@ public class 机器人的运动范围 {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 int[] temp = queue.poll();
+                // 先把点加进去，符不符合条件在这里过滤
                 if (temp[0] >= 0 && temp[0] < n && temp[1] >= 0 && temp[1] < m && !visited[temp[0]][temp[1]]) {
                     visited[temp[0]][temp[1]] = true;
                     res++;
-                    int[] up = new int[] {temp[0] + 1, temp[1]};
-                    int[] down = new int[] {temp[0] - 1, temp[1]};
-                    int[] left = new int[] {temp[0], temp[1] - 1};
-                    int[] right = new int[] {temp[0], temp[1] + 1};
-                    queue.offer(up);
-                    queue.offer(down);
-                    queue.offer(left);
-                    queue.offer(right);
+                    if (isValid(temp[0] + 1, temp[1], k)) {
+                        int[] up = new int[]{temp[0] + 1, temp[1]};
+                        queue.offer(up);
+                    }
+                    if (isValid(temp[0] - 1, temp[1], k)) {
+                        int[] down = new int[]{temp[0] - 1, temp[1]};
+                        queue.offer(down);
+                    }
+                    if (isValid(temp[0], temp[1] - 1, k)) {
+                        int[] left = new int[]{temp[0], temp[1] - 1};
+                        queue.offer(left);
+                    }
+                    if (isValid(temp[0], temp[1] + 1, k)) {
+                        int[] right = new int[]{temp[0], temp[1] + 1};
+                        queue.offer(right);
+                    }
+
                 }
             }
         }
         return res;
     }
 
-    public static void main(String[] args) {
-        boolean[] a = new boolean[3];
-        System.out.println(a[1]);
+    public boolean isValid(int x, int y, int k) {
+        int sum = 0;
+        while (x > 0) {
+            sum += x % 10;
+            x /= 10;
+        }
+        while (y > 0) {
+            sum += y % 10;
+            y /= 10;
+        }
+        if (sum <= k) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

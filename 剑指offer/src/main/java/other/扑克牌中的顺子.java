@@ -20,7 +20,7 @@ import java.util.Set;
  *
  * 输入: [0,0,1,2,5]
  * 输出: True
- *
+ *https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/
  *
  * 如果满足以下要求，则这个nums就是个顺子
  * 1。除了0以外，其他数字不能有重复

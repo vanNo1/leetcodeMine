@@ -6,7 +6,8 @@ import java.util.Queue;
 import java.util.Stack;
 
 /**
- * 定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数在该栈中，调用 min、push 及 pop 的时间复杂度都是 O(1)。
+ * 定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数在该栈中，
+ * 调用 min、push 及 pop 的时间复杂度都是 O(1)。
  *
  * 利用一个stack和一个deque
  * 维护最小值：

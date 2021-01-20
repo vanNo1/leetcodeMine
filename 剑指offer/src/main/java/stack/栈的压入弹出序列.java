@@ -12,6 +12,9 @@ import java.util.LinkedList;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ *
+ *  先压入pushed中的元素，然后再与popped中的元素用while比较
+ *
  */
 public class 栈的压入弹出序列 {
     public boolean validateStackSequences(int[] pushed, int[] popped) {

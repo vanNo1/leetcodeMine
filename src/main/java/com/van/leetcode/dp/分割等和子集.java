@@ -27,6 +27,9 @@ package com.van.leetcode.dp;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/partition-equal-subset-sum
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ *
+ *
+ * 背包问题！能否恰好装满背包，直接把总和的一半给算出来，然后看这个背包最后能否恰好被装满
  */
 
 public class 分割等和子集 {
@@ -35,6 +38,7 @@ public class 分割等和子集 {
         for (int num : nums) {
             capacity += num;
         }
+        //总和的一般如果为小数，呢么必不可能被分成两份
         if (capacity % 2 != 0) {
             return false;
         }

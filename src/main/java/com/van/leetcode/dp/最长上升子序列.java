@@ -12,6 +12,9 @@ package com.van.leetcode.dp;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/longest-increasing-subsequence
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ *
+ *  dp[i]的含义：以第i个节点为结尾的上升子序列的长度
+ *  思路:  比如要算dp[i],那么就要遍历nums[0-i-1]筛选出比nums[i]小的那几个，然后在dp中找出那几个最大的，然后再加1
  */
 public class 最长上升子序列 {
     public int lengthOfLIS(int[] nums) {
@@ -28,6 +31,7 @@ public class 最长上升子序列 {
                     dp[i]=Math.max(dp[i],dp[j]);
                 }
             }
+            // 这一步很巧妙，它把上述for循环的失败情况与+1做了总和，因为这里无论如何也要加1
             dp[i]=dp[i]+1;
         }
         for (int i = 0; i < dp.length; i++) {

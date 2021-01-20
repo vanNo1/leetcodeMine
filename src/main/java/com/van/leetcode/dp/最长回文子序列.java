@@ -33,6 +33,12 @@ package com.van.leetcode.dp;
  *
  * 这个dp数组的遍历，整个遍历下来：是一个正方形右上角部分形成的一个三角形
  * 每次遍历都是由左上角开始遍历到右下角
+ *
+ * case：
+ *      ██████      要判断这个
+ *       ████         如果它的头尾相等，那么就用这段dp+2
+ *    █████         否则：用这段dp和下面一段dp取最大的出来
+ *     █████
  */
 public class 最长回文子序列 {
     public int longestPalindromeSubseq(String s) {
@@ -45,7 +51,7 @@ public class 最长回文子序列 {
         }
 
         // i的话每次从0开始，最大值每次减少一，j的话每次加一开始，最大值每次都是s.len-1
-        // 所以这样设计遍历
+        // times就代表是从左上角到右下角的层数！
         for (int times = 1; times <len; times++) {
             for (int i = times; i < len; i++) {
                 if (s.charAt(i-times)==s.charAt(i)){

@@ -22,6 +22,7 @@ public class 连续子数组的最大和 {
         int[]dp=new int[nums.length];
         dp[0]=nums[0];
         for (int i = 1; i < dp.length; i++) {
+            // 这一段很巧妙：我要判断以上一个为底的和是否是负数，这里可以不用判断负数，直接用相加，然后与自身比较即可
             dp[i]=Math.max(nums[i],dp[i-1]+nums[i]);
         }
         int result=Integer.MIN_VALUE;

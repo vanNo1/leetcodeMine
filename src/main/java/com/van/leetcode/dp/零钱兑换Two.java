@@ -30,6 +30,7 @@ package com.van.leetcode.dp;
  *
  *
  * 每一列是一个amount，每一行是一种coin
+ * 用这个coin或者不用这个coin！
  * dp[coin][amount]=dp[coin][amount-coin]+dp[coin-1][amount](在此coin>amount 的情况下)
  */
 public class 零钱兑换Two {

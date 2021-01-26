@@ -25,6 +25,8 @@ package com.van.leetcode.window;
 /**
  * 思路：
  * 要在s2中维护连续则可固定窗口大小就为s1的长度，维护乱序相等则可用数组
+ * 重点是用一个128的数组来记录
+ *
  */
 public  class 字符串的排列 {
     public static boolean checkInclusion(String s1, String s2) {
@@ -43,7 +45,7 @@ public  class 字符串的排列 {
            need[s1.charAt(i)]++;
         }
         while (r<s2.length()){
-            //一开始进行一次判断，看看是否符合条件
+            //进行判断，看看是否符合条件
             int count=0;
             for (int i = 0; i < s1.length(); i++) {
                 if(window[s1.charAt(i)]==need[s1.charAt(i)]){
@@ -55,7 +57,9 @@ public  class 字符串的排列 {
                 return true;
             }else {
                 //否则改变窗口
+                // 左边界前移
                 window[s2.charAt(l++)]--;
+                // 右边界在不越界的前提下前移
                 if (r==s2.length()-1){
                     return false;
                 }else {

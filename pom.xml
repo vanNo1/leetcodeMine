@@ -6,6 +6,7 @@
     <modules>
         <module>剑指offer</module>
         <module>acwing</module>
+        <module>training</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

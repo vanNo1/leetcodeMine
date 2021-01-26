@@ -22,14 +22,19 @@ import java.util.List;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/interval-list-intersections
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ *
+ * 把点拿出来判断
  */
 public class 区间列表的交集 {
     private List<int[]> result=new ArrayList<>();
     public int[][] intervalIntersection(int[][] A, int[][] B) {
         int i=0,j=0;
+        // 有一方搞到底了就退出循环
         while (i<A.length&&j<B.length){
+            // a 点代表A中的
             int a1=A[i][0];
             int a2=A[i][1];
+            // b 点代表B中的
             int b1=B[j][0];
             int b2=B[j][1];
             int r1=Math.max(a1,b1);
@@ -37,6 +42,7 @@ public class 区间列表的交集 {
             if (r1<=r2){
                 result.add(new int[]{r1,r2});
             }
+            // 我只需要判断两个区间中后面的那个点即可，三种情况：
             if (a2<b2){
                 i++;
             }

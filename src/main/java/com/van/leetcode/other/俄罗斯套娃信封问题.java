@@ -30,14 +30,17 @@ public class 俄罗斯套娃信封问题 {
         //给二维数组排序
         Arrays.sort(envelopes,(o1,o2)->o1[0]==o2[0]?o2[1]-o1[1]:o1[0]-o2[0]);
         int[]son=new int[envelopes.length];
-        //构造最大子序列数组
+        // 构造最大子序列数组
+        // son其实就是一个dp数组，并且baseCase是0
         for (int i = 0; i < son.length; i++) {
             int maxLength=0;
             for (int j = 0; j <i ; j++) {
+                // 找出所有比当前高要矮的，并且从矮的里面选出dp值最大的
                 if (envelopes[j][1]<envelopes[i][1]){
                     maxLength=Math.max(maxLength,son[j]);
                 }
             }
+            // 拿最大的然后去+1
             son[i]=maxLength+1;
         }
         //把最大子序列数组中最大的值找出来即可，这就是最大的递增子序列

@@ -16,7 +16,7 @@ package com.van.leetcode.dp;
  *  dp[i]的含义：以第i个节点为结尾的上升子序列的长度
  *  思路:  比如要算dp[i],那么就要遍历nums[0-i-1]筛选出比nums[i]小的那几个，然后在dp中找出那几个最大的，然后再加1
  */
-public class 最长上升子序列 {
+public class 最长递增子序列 {
     public int lengthOfLIS(int[] nums) {
         if (nums.length==0){
             return 0;

@@ -49,15 +49,15 @@ public class 课程表 {
         for (int[] prerequisite : prerequisites) {
             // cur代表需要学习的课程
             int cur = prerequisite[0];
-            // next代表cur课程的先决课程
-            int next = prerequisite[1];
+            // pre代表cur课程的先决课程
+            int pre = prerequisite[1];
             // 给cur增加入度
             course2InDegree.put(cur, course2InDegree.get(cur) + 1);
             // 注意这里不要放反了，是next 连着cur，因为去掉next课程后需要找到它连着的课程，把这个课程的入度给减一
-            if (!adj.containsKey(next)) {
-                adj.put(next, new ArrayList<>());
+            if (!adj.containsKey(pre)) {
+                adj.put(pre, new ArrayList<>());
             }
-            adj.get(next).add(cur);
+            adj.get(pre).add(cur);
         }
 
         // 初始阶段队列中放入入度为0的课程，可以直接学习

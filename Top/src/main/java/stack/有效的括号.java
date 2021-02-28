@@ -1,4 +1,4 @@
-package 栈;
+package stack;
 
 import java.util.Stack;
 

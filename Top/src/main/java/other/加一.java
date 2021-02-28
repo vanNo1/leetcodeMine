@@ -39,23 +39,15 @@ package other;
  */
 public class 加一 {
     public int[] plusOne(int[] digits) {
-        int i = digits.length - 1;
-        while (i >= 0) {
-            if (digits[i] == 9) {
-                digits[i] = 0;
-                i--;
-            } else {
-                digits[i] += 1;
-                break;
-            }
+        int len = digits.length;
+        for(int i = len - 1; i >= 0; i--) {
+            digits[i]++;
+            digits[i] %= 10;
+            if(digits[i]!=0)
+                return digits;
         }
-        // 如果i==-1 意味着整个数组都是9，那么我就要另外开一个数组
-        if (i == -1) {
-            int[] result = new int[digits.length + 1];
-            result[0] = 1;
-            return result;
-        }
-        // 只要i！=-1 意味着在digits数组中加一了
+        digits = new int[len + 1];
+        digits[0] = 1;
         return digits;
     }
 }

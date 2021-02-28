@@ -35,6 +35,7 @@ import java.util.*;
  *
  * 走了几个弯路：我用了优先队列来做，其实不行，优先队列把所有元素都加入了！
  * 第二个我想把baseCase 合并起来，写在一个循环里面，当这个deque.size()==k我才snapshot，这里我忽略了deque的size是不满的
+ * 这里的右窗口也是虚的！
  *
  */
 public class 滑动窗口的最大值 {

@@ -7,7 +7,7 @@ package dp;
 public class 零钱兑换two {
     public int change(int amount, int[] coins) {
         int[][] dp = new int[coins.length + 1][amount + 1];
-        // base case:
+        // base case: 其实0，0 取不到设置为1也无妨
         for (int i = 0; i < dp.length; i++) {
             dp[i][0] = 1;
         }

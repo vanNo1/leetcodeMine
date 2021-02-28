@@ -23,7 +23,7 @@ import java.util.List;
  * 输入:
  *     5
  *    / \
- *   1   4
+ *   1
  *      / \
  *     3   6
  * 输出: false

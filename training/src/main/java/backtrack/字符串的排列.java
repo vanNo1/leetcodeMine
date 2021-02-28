@@ -11,43 +11,30 @@ import java.util.stream.Collectors;
  * @date 2021/1/29 - 11:07
  */
 public class 字符串的排列 {
-   private static List<List<Character>> result = new ArrayList<>();
+    private List<String> result = new ArrayList<>();
 
-    public static String[] permutation(String s) {
-        char[] chars = s.toCharArray();
-        boolean[] visited = new boolean[chars.length];
-        backtrack(chars, new ArrayList<>(), visited);
-        List<String> ans = new ArrayList<>();
-        result.forEach(characters -> {
-            String value = characters.stream().map(character -> character + "").reduce("", (o1, o2) -> o1 + o2);
-            ans.add(value);
-        });
-        return ans.toArray(new String[ans.size()]);
+    public String[] permutation(String s) {
+        backtrack(s.toCharArray(),new StringBuilder(),new boolean[s.length()]);
+        return result.toArray(new String[result.size()]);
     }
 
-    public static void backtrack(char[] chars, List<Character> track, boolean[] visited) {
-        if (track.size() == chars.length) {
-            result.add(new ArrayList<>(track));
+    public void backtrack(char[] chars, StringBuilder track, boolean[] visited) {
+        if (track.length() == chars.length) {
+            result.add(track.toString());
             return;
         }
         Set<Character> set = new HashSet<>();
         for (int i = 0; i < chars.length; i++) {
-            if (visited[i] == true) {
-                continue;
-            }
-            if (set.contains(chars[i])) {
+            if (visited[i] || set.contains(chars[i])) {
                 continue;
             }
             set.add(chars[i]);
             visited[i] = true;
-            track.add(chars[i]);
+            track.append(chars[i]);
             backtrack(chars, track, visited);
-            track.remove(track.size() - 1);
             visited[i] = false;
+            track.deleteCharAt(track.length() - 1);
         }
     }
 
-    public static void main(String[] args) {
-        permutation("aab");
-    }
 }

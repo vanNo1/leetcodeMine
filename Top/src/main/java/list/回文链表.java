@@ -2,6 +2,8 @@ package list;
 
 import com.sun.org.apache.bcel.internal.generic.FADD;
 
+import java.util.Arrays;
+
 /**
  * 请判断一个链表是否为回文链表。
  * <p>

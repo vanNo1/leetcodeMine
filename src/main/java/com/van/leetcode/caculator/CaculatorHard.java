@@ -14,7 +14,6 @@ public class CaculatorHard {
         Stack<Integer>nums=new Stack<>();
         int num = 0;
         int res = 0;
-        boolean flag = false;
         for (; i < s.length(); i++)
         {
             if (s.charAt(i) >= '0' && s.charAt(i) <= '9')
@@ -24,7 +23,8 @@ public class CaculatorHard {
             if (s.charAt(i) == '(')
             {
                 num = calHelper(s, ++ i); //从i的下一个开始计算， 进入递归
-                i++; //计算完之后的i指向)所以再++
+                continue;
+//                i++; //计算完之后的i指向)所以再++
             }
             if (((s.charAt(i) < '0' || s.charAt(i) > '9') && s.charAt(i) != ' ') || i >= s.length() - 1) // 继续计算
             {

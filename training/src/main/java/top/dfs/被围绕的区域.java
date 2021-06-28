@@ -22,7 +22,7 @@ public class 被围绕的区域 {
         }
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
-                // 这里必须进入一个，否则，前面还原出来的0又会被写成X
+                // 这里必须二选一，否则，前面还原出来的0又会被写成X
                 if (board[i][j] == '?') {
                     board[i][j] = 'O';
                 } else if (board[i][j] == 'O') {

@@ -39,7 +39,7 @@ import java.util.List;
 public class 单词拆分 {
     public boolean wordBreak(String s, List<String> wordDict) {
         boolean[] dp = new boolean[s.length() + 1];
-        //前面包了个0来实现大统一
+        //前面包了个0来实现大统一：假如j=0时后面的字符串就已经在wordDict中
         dp[0] = true;
         for (int i = 1; i < dp.length; i++) {
             for (int j = 0; j < i; j++) {

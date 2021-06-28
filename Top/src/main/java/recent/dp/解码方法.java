@@ -32,7 +32,14 @@ package recent.dp;
  * 链接：https://leetcode-cn.com/problems/decode-ways
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * 有点麻烦，要讨论cur是否为0
+ * 核心思想就是讨论：
+ *                          ----->pre不为0且和前面数字成为一体在范围内--->dp[i + 1] = dp[i] + dp[i - 1];
+ *       ------> 不等于0----
+ *      -                    ------>pre为0----> dp[i + 1] = dp[i];
+ * cur--
+ *      -                    ------>pre是1或者2---->它和它前面的一个数字成为一体
+ *       ------> 等于0------
+ *                          ------>pre不是1也不是2--->这个数字不符合规范
  */
 public class 解码方法 {
     public int numDecodings(String s) {

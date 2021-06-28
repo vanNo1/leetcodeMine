@@ -66,7 +66,6 @@ public  class 字符串的排列 {
                     window[s2.charAt(++r)]++;
                 }
             }
-
         }
         return false;
     }
